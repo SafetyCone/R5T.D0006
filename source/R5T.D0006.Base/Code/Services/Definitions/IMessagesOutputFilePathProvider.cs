@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
 
+using R5T.T0064;
+
 
 namespace R5T.D0006
 {
-    public interface IMessagesOutputFilePathProvider
+    [ServiceDefinitionMarker]
+    public interface IMessagesOutputFilePathProvider : IServiceDefinition
     {
         Task<string> GetMessagesOutputFilePathAsync();
     }
